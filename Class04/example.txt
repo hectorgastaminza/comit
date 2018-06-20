@@ -1,0 +1,236 @@
+var number : count = 0
+var number : total = 0
+
+READ (total)
+
+WHILE (count < total) DO
+	PRINT ("Hello my friends")
+	count = count + 1
+END WHILE
+
+
+var number : next = 1
+var number : sum = 0
+var number : total = 0
+
+READ (total)
+
+WHILE (next <= total) DO
+	sum = sum + next
+	next = next + 1
+END WHILE
+
+
+var number : next = 1
+var number : mult = 1
+var number : total = 0
+
+READ (total)
+
+WHILE (next <= total) DO
+	mult = mult * next
+	next = next + 1
+END WHILE
+
+
+var number : count = 0
+var number : next = 1
+var number : sum = 0
+var number : total = 0
+
+READ (total)
+
+WHILE (count < total) DO
+
+  IF(next MOD 2 == 0) THEN
+			sum = sum + next
+			count = count + 1
+	ENDIF
+
+	next = next + 1
+END WHILE
+
+
+var number : greatest = 0
+var number : count = 0
+var number : position = 0
+var number : value = MINUMUM_VALUE
+
+READ(n)
+
+WHILE (count < n) DO
+
+	READ(value)
+
+	IF (greatest > value) THEN
+			greatest = value
+			position = count
+	ENDIF
+
+	count = count + 1
+
+END WHILE
+
+PRINT("The greatest number is " + greatest + ". It was in the position " + position)
+
+var number : least = 0
+var number : value = MAXIMUM VALUE
+
+WHILE (value == -1) DO
+
+	READ(value)
+
+	IF (least > value) THEN
+ 		least = value
+	ENDIF
+
+END WHILE
+
+PRINT("The least number is " + least)
+
+var number : count = 1
+var number : countMultiples = 0
+var number : n
+
+READ(n)
+
+WHILE (count < n) DO
+
+	if (count MOD 3 == 0) THEN
+		PRINT("The number " + count + " is multiple")
+		countMultiples = countMultiples + 1
+	ENDIF
+
+	count = count + 1
+
+END WHILE
+
+PRINT("The number of multiples is " + countMultiples)
+
+
+
+var number : sum = 0
+var number : value = -1
+var number : count = 0
+
+WHILE (value != 0) DO
+
+	READ(value)
+	sum = sum + value
+	count = count + 1
+
+END WHILE
+
+PRINT("The average is " + sum/count)
+
+Write an algorithm that requests the reading of a series of individual characters
+and count how many times the letter "a" is entered.
+The user ends by entering the "$" symbol.
+
+var char : character = 'a'
+var number : count = 0
+
+WHILE (character != '$') DO
+
+	READ(character)
+
+	if (character == 'a') THEN
+		count = count + 1
+	ENDIF
+
+END WHILE
+
+PRINT("The character 'a' appears " + count + " times.")
+
+Develop an algorithm to count the number of students whose weight is between 50 and 60,
+between 61 and 80 and between 81 and 100. The weights are entered by keyboard and report
+the number of students in each category of weight. How does the algorithm change
+if I want to accumulate weight totals for each category?
+
+var number : count = 0
+var number : n
+var number : cat50to60 = 0
+var number : cat61to80 = 0
+var number : cat81to100 = 0
+var number : catOthers = 0
+var number : weight
+
+READ(n)
+
+WHILE (count < n) DO
+
+	READ(weight)
+
+	IF (weight >= 50 AND weight <= 60) THEN
+		cat50to60 = cat50to60 + 1
+	ELSE IF (weight > 60 AND weight <= 80) THEN
+		cat61to80 = cat61to80 + 1
+	ELSE IF (weight > 80 AND weight <= 100) THEN
+		cat81to100 = cat81to100 + 1
+	ELSE
+		catOthers = catOthers + 1
+	ENDIF
+
+END WHILE
+
+PRINT("There are " + cat50to60 + " students who weight is between 50 and 60.")
+PRINT("There are " + cat61to80 + " students who weight is between 61 and 80.")
+PRINT("There are " + cat81to100 + " students who weight is between 81 and 100.")
+PRINT("There are " + catOthers + " students who weight is not between the previous categories.")
+
+
+Write an algorithm to determine if a number read by keyboard is prime.
+
+var number : value
+var number : divisor = 2
+var bolean : prime = FALSE
+
+READ(value)
+
+WHILE (value > divisor AND value MOD divisor != 0) DO
+	divisor = divisor + 1
+END WHILE
+
+IF (value == divisor OR value == 1) THEN
+	prime = TRUE
+END IF
+
+PRINT("The number " + value + " prime number evaluation is " + prime)
+
+
+Write an algorithm to print and count numbers that are multiples of 2 or 3
+that are between 1 and 100
+
+var number : count = 1
+var number : multiple = 0
+
+WHILE (count <= 100) DO
+	IF (count MOD 2 == 0 OR count MOD 3 == 0) THEN
+		countMultiples = countMultiples +1
+		PRINT ("The number " + count + " is multiple of 2 or 3.")
+	ENDIF
+END WHILE
+
+PRINT("The number of multiples of 2 or 3 is " + countMultiples)
+
+
+Develop an algorithm to determine if a series of numbers
+that the user is entering is in increasing order or not.
+
+var number : value = 0
+var number : previousValue = 0
+
+WHILE (isThereMoreNumbers) DO
+	READ (value)
+
+	IF (value > previousValue) THEN
+		PRINT ("The serie is in increasing order")
+	ELSE
+		PRINT ("The serie is not in increasing order")
+	ENDIF
+
+	previousValue = value
+
+END WHILE
+
+PRINT("The number of multiples of 2 or 3 is " + countMultiples)
