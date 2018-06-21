@@ -183,3 +183,61 @@ algorithm isYearLeap (Number : year) : Boolean
 
   return result
 end algorithm
+
+
+/*
+  Write a sub-algorithm to determine the number of days of a month of a year,
+  the latter two parameters of the sub-algorithm.
+
+  January - 31 days
+  February - 28 days in a common year and 29 days in leap years
+  March - 31 days
+  April - 30 days
+  May - 31 days
+  June - 30 days
+  July - 31 days
+  August - 31 days
+  September - 30 days
+  October - 31 days
+  November - 30 days
+  December - 31 days
+*/
+
+algorithm daysOfAMonth (Number : year, Number : month) : Number
+  var Number : result = 0
+
+  SWITCH (month) :
+    CASE 1:
+      result = 31
+    CASE 2:
+      IF (isYearLeap(year)) THEN
+        result = 29
+      ELSE
+        result = 28
+      ENDIF
+    CASE 3:
+      result = 31
+    CASE 4:
+      result = 30
+    CASE 5:
+      result = 31
+    CASE 6:
+      result = 30
+    CASE 7:
+      result = 31
+    CASE 8:
+      result = 31
+    CASE 9:
+      result = 30
+    CASE 10:
+      result = 31
+    CASE 11:
+      result = 30
+    CASE 12:
+      result = 31
+    DEFAULT:
+      result = 0
+  END SWITCH
+
+  return result
+end algorithm
