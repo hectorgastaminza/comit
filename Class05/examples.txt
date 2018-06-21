@@ -1,0 +1,185 @@
+*/
+  Create an algorithm that determines if a user is allowed to vote or not,
+  depending on their age (if they are 18 or older, they are allowed to vote),
+  and prints out either:
+  “You are allowed to vote”, or
+  “You are not allowed to vote.”
+
+  Use a subalgorithm to read the age of the user, and return true or false (Boolean)
+  if the user is allowed to vote.
+
+  Use your main algorithm to invoke your sub algorithm, and print the appropriate message
+  depending on if the returned value is true or false.
+*/
+
+algorithm IsAnAdult() : Boolean
+
+  var number : age
+  var Boolean : retval = true
+
+  READ(age)
+
+  IF (age < 18) THEN
+    retval = false
+  END IF
+
+  return retval
+
+end algorithm
+
+algorithm main() : void
+
+  IF (IsAnAdult()) THEN
+    PRINT("You are allowed to vote.")
+  ELSE
+    PRINT("You are not allowed to vote.")
+  END IF
+
+end algorithm
+
+
+Write another function that calculates the tax based on the net amount.
+Invoke the function from the calculateNet function to get the final
+total for the customer.
+
+algorithm calculateNet
+  var Number : gross, discount, net, total
+  read(gross)
+  discount ← calculateDiscount (gross)
+  net ← gross - discount
+  total ← net + calculateTax(net)
+end algorithm
+
+algorithm calculateDiscount (Number : amount) : Number
+
+  var Number : discount
+
+  if(amount< 1000) then // If spend less than 1000 then apply 30%
+    discount ← amount * 0.30
+  else	 // if spend is more than 1000 then apply 35%
+    discount ← amount * 0.35
+  end if
+
+  if discount > 500 then // There won’t be discount over $500
+    discount ← 500
+  end if
+
+  return discount
+
+end algorithm
+
+algorithm calculateTax (Number : amount) : Number
+
+  return amount * 0.13
+
+end algorithm
+
+
+/*
+Count the number of words, separated by one or more spaces, from a telegram
+ending in point. It can be assumed that the user enters character by
+character the telegram or the complete sequence, which is more comfortable
+to propose a solution.
+*/
+
+algorithm main
+  var String : text = ""
+  var Number : count = 0
+
+  text = readText('.')
+  count = countWords('.', text)
+
+  PRINT("Number of words is " + count)
+
+end algorithm
+
+algorithm readText (Char : endText) : String
+  var String : text = ""
+  var Char : character = ''
+
+  WHILE (character != endText) DO
+    READ(character)
+    text = text + character
+  END WHILE
+
+  return text
+end algorithm
+
+algorithm countWords (Char : endText, String text) : Number
+  var Number : count = 0
+  var Char : character = nextChar(text)
+  var Char : previousCharacter = ' '
+
+  WHILE (character != endText) DO
+    IF(previousCharacter == ' ' AND character != ' ') THEN
+      count = count + 1
+    END IF
+    previousCharacter = character
+    character = nextChar(text)
+  END WHILE
+
+  return count
+end algorithm
+
+
+/*
+  Develop an algorithm for a dice game. The player must bet on a number
+  between 1 and 6 (keyboard reading), then you must simulate the roll of a dice
+  and finally inform the player if he has won or lost (print on screen).
+*/
+
+algorithm main
+  var Number : value = 0
+
+  READ(value)
+
+  IF(DiceGame(value)) THEN
+    PRINT("You won.")
+  ELSE
+    PRINT("You lose.")
+  END IF
+
+end algorithm
+
+algorithm DiceGame (Number : value) : Boolean
+  var Boolean : result = false
+  var Number : dice = RANDOM(1,6)
+
+  if(dice == value)
+    result = true
+
+  return result
+end algorithm
+
+/*
+  Write an algorithm to invert a string of characters.
+*/
+
+algorithm InvertString (String : text) : String
+  var String : result = text
+  var Number : lenght = LENGHT(text)
+  var Number : counter = 0
+
+  WHILE (counter < (lenght/2)) DO
+    REPLACE(result, counter, CharIn(text, (lenght-1)-counter))
+    REPLACE(result, (counter-1)-i, CharIn(text, counter))
+    counter = counter + 1
+  END WHILE
+
+  return result
+end algorithm
+
+/*
+  Write a sub-algorithm that has a parameter of type number that represents
+  a year and determines whether the year is leap year or not.
+*/
+
+algorithm isYearLeap (Number : year) : Boolean
+  var Boolean : result = false
+
+  IF(year MOD 4 == 0) THEN
+    result = true
+  ENDIF
+
+  return result
+end algorithm
