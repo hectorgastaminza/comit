@@ -241,3 +241,27 @@ algorithm daysOfAMonth (Number : year, Number : month) : Number
 
   return result
 end algorithm
+
+
+/*
+  A meteorological station collects rain data for a month and year of a
+  determined locality. An algorithm must be written asking the user to enter
+  a month and a year, and allow for each day of that month in that year,
+  enter the millimeters of water that were recorded (in case of not having
+  registered a rain one day is entered 0) . The amount of total millimeters
+  of water precipitated in that month must be shown, the maximum precipitation
+  recorded for a day and on what day it was given, and finally if it rained
+  two days in a row.
+*/
+
+  Ask for day and year
+
+  Get the number of days for that daysOfAMonth
+
+  Ask for the rain data for each day
+
+  Find the sum
+
+  Find the maximum and its position
+
+  Find if rained > 0 two times in a row
