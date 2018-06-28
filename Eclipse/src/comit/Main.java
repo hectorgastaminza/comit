@@ -15,7 +15,7 @@ public class Main {
 		 * You will receive a decimal number corresponding to the amount in CAD and will answer with the corresponding amount in US dollars. 
 		 * Take the quotation of the dollar today.
 		 */		
-		System.out.println("The value of 100 CAD is " + Convert.convertCADtoUSD(100) + " USD");
+		// System.out.println("The value of 100 CAD is " + String.format("%.4f", Convert.convertCADtoUSD(100)) + " USD");
 		
 		//Examples.printLargestOfTwo();
 		
@@ -30,8 +30,14 @@ public class Main {
 		
 		//Examples.exampleMultiplicationTables();
 
+		/*
 		if(Examples.examplePassword("comit", 3))
 			Examples.example0628();
+			*/
+		
+		//ShoppingCart.buy();
+		
+		DayOfTheWeek.evaluateDayOfTheWeekWHILE();
 	}
 	
 }

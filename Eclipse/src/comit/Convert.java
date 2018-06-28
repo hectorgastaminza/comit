@@ -1,8 +1,8 @@
 package comit;
 
 public class Convert {
-	public static float convertCurrency(float value, float rate) {
-		float result = 0;
+	public static double convertCurrency(double value, double rate) {
+		double result = 0;
 		
 		result = value * rate;
 		
@@ -16,9 +16,9 @@ public class Convert {
 	 * @param cad
 	 * @return usd 
 	 */
-	public static float convertCADtoUSD(float cad)
+	public static double convertCADtoUSD(double cad)
 	{
-		final float rate = 0.750835F;
+		final double rate = 0.750835F;
 		
 		return convertCurrency(cad, rate);
 	}
