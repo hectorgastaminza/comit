@@ -108,13 +108,14 @@ public class DayOfTheWeek {
 				System.out.println("It is the weekend");
 				break;
 			case "exit":
-				System.out.println("Thanks for using the application");
 				break;
 			default:
 				System.out.println("Wrong data");
 				break;
 			}
 		}
+		
+		System.out.println("Thanks for using the application!");
 	}
 
 }

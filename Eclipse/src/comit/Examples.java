@@ -360,5 +360,31 @@ public class Examples {
 		
 		return result;		
 	}
+	
+	/* Class 08
+	 * 
+	 * ON MODULARIZATION AND VARIABLES SCOPE.
+	 * 
+	 * 1-WRITE AN ALGORITHM THAT INVOKES ANOTHER ONE, AND THE INVOKED ONE PRINTS A VALUE.
+	 * 2-WRITE AN ALGORITHM THAT INVOKES ANOTHER ONE TO BE CALLED "ADD”, THAT RECEIVES TWO NUMBERS. THE "ADD" ALGORITHM MUST ADD THE PARAMETERS. THE INVOKING ALGORITHM SHOULD RECEIVE BACK THAT VALUE AND SHOW IT ON SCREEN.
+	 * 3 - WRITE AN ALGORITHM AND SUBALGORITHM. WRITE TWO VARIABLES WITH THE SAME NAME SO THAT THE COMPILER DOES NOT SHOW AN ERROR.
+	 * 
+	 */
+	
+	public static void ExampleModularPrint(int param1) {
+		int value = param1;
+		System.out.println(value);
+	}
+	
+	public static int ExampleModularAdd(int param1, int param2) {
+		int value = param1 + param2;
+		return value;
+	}
+	
+	public static void ExampleModular()
+	{
+		int value = ExampleModularAdd(1, 2);
+		ExampleModularPrint(value);
+	}
 }
 

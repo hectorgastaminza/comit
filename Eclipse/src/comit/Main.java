@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println("The average is " + Average.average(10, 20));
+		// System.out.println("The average is " + Average.average(10, 20));
 		
 		// Examples.examplePrintValues();
 		
@@ -33,11 +33,13 @@ public class Main {
 		/*
 		if(Examples.examplePassword("comit", 3))
 			Examples.example0628();
-			*/
+		*/
 		
 		//ShoppingCart.buy();
 		
-		DayOfTheWeek.evaluateDayOfTheWeekWHILE();
+		//DayOfTheWeek.evaluateDayOfTheWeekWHILE();
+		
+		Examples.ExampleModular();
 	}
 	
 }
