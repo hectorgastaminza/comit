@@ -39,7 +39,15 @@ public class Main {
 		
 		//DayOfTheWeek.evaluateDayOfTheWeekWHILE();
 		
-		Examples.ExampleModular();
+		//Examples.ExampleModular();
+		
+		//ExampleArrays.arrayTwoDimensionsGrades();
+		
+		//Examples.exampleHeightStudents();
+		
+		//Vehicles.example();
+		
+		Poll.example();
 	}
 	
 }

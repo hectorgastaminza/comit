@@ -16,4 +16,40 @@ public class Average {
 		
 		return retval;
 	}
+	
+	public static int averageArray(int[] values)
+	{
+		int average = 0;
+		
+		for (int i = 0; i < values.length; i++) {
+			average += values[i];
+		}
+		average /= values.length;
+		
+		return average;
+	}
+	
+	public static int valuesAboveAverage(int[] values, int average)
+	{
+		int count = 0;
+		
+		for (int i = 0; i < values.length; i++) {
+			if(values[i] > average)
+				count++;
+		}
+		
+		return count;
+	}
+	
+	public static int valuesBelowAverage(int[] values, int average)
+	{
+		int count = 0;
+		
+		for (int i = 0; i < values.length; i++) {
+			if(values[i] < average)
+				count++;
+		}
+		
+		return count;
+	}	
 }

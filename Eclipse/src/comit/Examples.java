@@ -386,5 +386,33 @@ public class Examples {
 		int value = ExampleModularAdd(1, 2);
 		ExampleModularPrint(value);
 	}
+	
+	/**
+	 * Class 09
+	 * Write a program that allows you to enter the height of 10 students, 
+	 * then show the average height, and 
+	 * how many elements are above average, 
+	 * how many are below average.
+	 */
+	public static void exampleHeightStudents() {
+		Scanner myScanner = new Scanner(System.in);
+		int numberStudents;
+		int average;
+		
+		System.out.println("Enter the number of students: ");
+		numberStudents = myScanner.nextInt();		
+		int[] students = new int[numberStudents];
+		
+		for (int i = 0; i < students.length; i++) {
+			System.out.println("Enter height for student " + (i+1) + " :");
+			students[i] = myScanner.nextInt();
+		}
+		
+		average = Average.averageArray(students);
+		
+		System.out.println("Average height: " + average);
+		System.out.println("Student above average: " + Average.valuesAboveAverage(students, average));
+		System.out.println("Student below average: " + Average.valuesBelowAverage(students, average));		
+	}
 }
 
