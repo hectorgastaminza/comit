@@ -47,7 +47,9 @@ public class Main {
 		
 		//Vehicles.example();
 		
-		Poll.example();
+		//Poll.example();
+		
+		ExampleArrays.showAsciiOfAString();
 	}
 	
 }

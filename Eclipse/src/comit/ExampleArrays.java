@@ -84,5 +84,22 @@ public class ExampleArrays {
 		System.out.println("The average grade for all the students is " + totalAvg);
 	}
 	
+	
+	public static void showAsciiOfAString() {
+		Scanner myScanner = new Scanner(System.in);
+		String myString;
+		
+		System.out.println("Enter the string: ");
+		myString = myScanner.nextLine();
+		
+		for (int idxChar = 0; idxChar < myString.length(); idxChar++) {
+			System.out.print((int)myString.charAt(idxChar));
+			if(idxChar < (myString.length()-1))
+			{
+				System.out.print(", ");
+			}
+		}
+	}
+	
 
 }
