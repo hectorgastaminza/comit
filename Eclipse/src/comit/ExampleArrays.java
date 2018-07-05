@@ -101,5 +101,30 @@ public class ExampleArrays {
 		}
 	}
 	
+	public static void exampleCompareStrings() {
+		System.out.println("The first string is " + compareString("brenda", "bobby", false));
+		System.out.println("The first string is " + compareString("Brenda", "bobby", false));
+		System.out.println("The first string is " + compareString("Brenda", "bobby", true));
+	}
+	
+	public static String compareString(String value1, String value2, boolean lowerCaseComparer) {
+		String lowerCaseValue1 = (lowerCaseComparer) ? value1.toLowerCase() : value1;
+		String lowerCaseValue2 = (lowerCaseComparer) ? value2.toLowerCase() : value2;
+		boolean returnValue1 = true;
+
+		for (int idxString = 0; (idxString < lowerCaseValue1.length()) && (idxString < lowerCaseValue2.length()) ; idxString++) {
+			if((int)lowerCaseValue2.charAt(idxString) != (int)lowerCaseValue1.charAt(idxString))
+			{
+				if((int)lowerCaseValue2.charAt(idxString) < (int)lowerCaseValue1.charAt(idxString))
+				{
+					returnValue1 = false;
+				}
+				break;
+			}
+		}
+
+		return (returnValue1) ? value1 : value2; 
+	}
+	
 
 }

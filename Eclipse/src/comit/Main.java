@@ -49,7 +49,11 @@ public class Main {
 		
 		//Poll.example();
 		
-		ExampleArrays.showAsciiOfAString();
+		//ExampleArrays.showAsciiOfAString();
+		
+		//Rocket.example();
+		
+		ExampleArrays.exampleCompareStrings();
 	}
 	
 }
