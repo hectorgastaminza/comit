@@ -53,7 +53,9 @@ public class Main {
 		
 		//Rocket.example();
 		
-		ExampleArrays.exampleCompareStrings();
+		//ExampleArrays.exampleCompareStrings();
+		
+		Examples.exampleBook();
 	}
 	
 }

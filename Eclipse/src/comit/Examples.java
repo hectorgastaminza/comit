@@ -414,5 +414,40 @@ public class Examples {
 		System.out.println("Student above average: " + Average.valuesAboveAverage(students, average));
 		System.out.println("Student below average: " + Average.valuesBelowAverage(students, average));		
 	}
+	
+	/**
+	 * Class11. Example Classes
+	 */
+	public static void exampleBook() {
+		Scanner myScanner = new Scanner(System.in);
+		Book[] myBooks;
+		int numberBooks;
+		String bookName;
+		int bookPages;
+		
+		System.out.println("Enter the number of books:");
+		numberBooks = myScanner.nextInt();
+		
+		myBooks = new Book[numberBooks];
+		
+		for (int idxBook = 0; idxBook < myBooks.length; idxBook++) {
+			System.out.println("Enter the book name:");
+			bookName = myScanner.next();
+			System.out.println("Enter the number of pages:");
+			bookPages = myScanner.nextInt();
+			myBooks[idxBook] = new Book(bookName, bookPages);
+		}
+		
+		Book largest = myBooks[0];
+		for (int idxBook = 1; idxBook < myBooks.length; idxBook++) {
+			if(myBooks[idxBook].pages > largest.pages)
+				largest = myBooks[idxBook];
+		}
+		
+		System.out.println("The largest book is " + largest.name + ".");
+		System.out.println("It has " + largest.pages + " pages.");
+		System.out.println(largest.sheetsNeededToPrintIt() + " sheets of paper are required to print it.");
+
+	}
 }
 
