@@ -440,13 +440,22 @@ public class Examples {
 		
 		Book largest = myBooks[0];
 		for (int idxBook = 1; idxBook < myBooks.length; idxBook++) {
-			if(myBooks[idxBook].pages > largest.pages)
+			if(myBooks[idxBook].getPages() > largest.getPages())
 				largest = myBooks[idxBook];
 		}
 		
 		System.out.println("The largest book is " + largest.toString());
 		System.out.println(largest.sheetsNeededToPrintIt() + " sheets of paper are required to print it.");
 
+	}
+	
+	/**
+	 * Class14 example
+	 */
+	public static void exampleLibrary()
+	{
+		Library myLibrary = new Library();
+		myLibrary.launcher();
 	}
 }
 

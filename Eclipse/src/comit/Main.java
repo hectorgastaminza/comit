@@ -55,7 +55,9 @@ public class Main {
 		
 		//ExampleArrays.exampleCompareStrings();
 		
-		Examples.exampleBook();
+		//Examples.exampleBook();
+		
+		Examples.exampleLibrary();
 	}
 	
 }
