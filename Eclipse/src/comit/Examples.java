@@ -444,8 +444,7 @@ public class Examples {
 				largest = myBooks[idxBook];
 		}
 		
-		System.out.println("The largest book is " + largest.name + ".");
-		System.out.println("It has " + largest.pages + " pages.");
+		System.out.println("The largest book is " + largest.toString());
 		System.out.println(largest.sheetsNeededToPrintIt() + " sheets of paper are required to print it.");
 
 	}
