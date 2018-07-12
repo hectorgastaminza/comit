@@ -1,5 +1,6 @@
 package comit;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Examples {
@@ -456,6 +457,28 @@ public class Examples {
 	{
 		Library myLibrary = new Library();
 		myLibrary.launcher();
+	}
+	
+	/**
+	 * Class15 example
+	 */
+	public static void exampleBikes() {
+		Bike[] myBikes = new Bike[10];
+		
+		for (int idx = 0; idx < myBikes.length; idx++) {
+			myBikes[idx] = new Bike();
+		}
+		
+		for (int idx = 0; idx < myBikes.length; idx++) {
+			if(idx % 2 != 0)
+			{
+				myBikes[idx].accelerate(10);
+			}
+		}
+		
+		for (int idx = 0; idx < myBikes.length; idx++) {
+			System.out.println("Bike <" + idx + "> - " + myBikes[idx].toString());
+		}
 	}
 }
 

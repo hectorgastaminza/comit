@@ -57,7 +57,9 @@ public class Main {
 		
 		//Examples.exampleBook();
 		
-		Examples.exampleLibrary();
+		//Examples.exampleLibrary();
+		
+		Examples.exampleBikes();
 	}
 	
 }
