@@ -59,7 +59,9 @@ public class Main {
 		
 		//Examples.exampleLibrary();
 		
-		Examples.exampleBikes();
+		//Examples.exampleBikes();
+		
+		Examples.exampleCompareObjects();
 	}
 	
 }

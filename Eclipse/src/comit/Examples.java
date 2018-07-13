@@ -480,5 +480,43 @@ public class Examples {
 			System.out.println("Bike <" + idx + "> - " + myBikes[idx].toString());
 		}
 	}
+	
+	public static void exampleCompareObjects() {
+		Student a = new Student("Jaime", "Wallas");
+		Student b = new Student("Jaime", "Wallas");
+		Student c = new Student("Aime", "Allas");
+		
+		compareStudents(a,b);
+		compareStudents(b,c);
+		compareStudents(a,c);
+	}
+	
+	private static void compareStudents(Student a, Student b)
+	{
+		if(a.equals(b))
+		{
+			System.out.println(a.toString() + " is equal to " + b.toString());
+		}
+		else
+		{
+			System.out.println(a.toString() + " is NOT equal to " + b.toString());
+		}
+	}
+	
+	
+	public <T> boolean arrayInsertItem(T value, T[] array, int position)
+	{
+		if ((array != null) && (position < array.length))
+		{
+			int count = (array.length - position - 1);
+			if(count > 0)
+			{
+				System.arraycopy(array, position, array, (position + 1), count);
+			}
+			array[position] = value;
+		}
+		return true;
+	}
+	
 }
 
