@@ -61,7 +61,11 @@ public class Main {
 		
 		//Examples.exampleBikes();
 		
-		Examples.exampleCompareObjects();
+		//Examples.exampleCompareObjects();
+		
+		//Examples.examplePosition();
+		
+		Examples.exampleAccount();
 	}
 	
 }

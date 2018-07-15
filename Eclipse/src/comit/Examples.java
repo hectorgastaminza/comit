@@ -503,6 +503,56 @@ public class Examples {
 		}
 	}
 	
+	/** 
+	 * Class15 Question 1
+	 * 
+	 * Create a main class that creates four points at the following positions:
+	 * Point 0: X: 0, Y: 0
+	 * Point 1: X: 1, Y: 1
+	 * Point 2: X: 2, Y: 2
+	 * Point 3: X: 3, Y: 3
+	 * 
+	 * Then modify the values of all the points to increase Y by 10. Print the new coordinates of all the points.
+	 */
+	public static void examplePosition()
+	{
+		Position[] points = new Position[4];
+		
+		points[0] = new Position(0,0);
+		points[1] = new Position(1,1);
+		points[2] = new Position(2,2);
+		points[3] = new Position(3,3);
+		
+		for (int i = 0; i < points.length; i++) {
+			points[i].incY(10);
+			System.out.println("Point " + (i+1) + " : " + points[i].toString());
+		}
+	}
+	
+	
+	/**
+	 * Question 2 - Create an Account and Person class:
+	 * 
+	 * In your main class, create two accounts belonging to two different people. 
+	 * Make a deposit and a withdrawal in each account. Print the names of both people, 
+	 * as well as the information about their accounts.
+	 * 
+	 */
+	public static void exampleAccount()
+	{		
+		Account account1 = new Account(1,10000,new Person("Richard", "Rich", "1234567890"));
+		Account account2 = new Account(2,0,new Person("Richard", "Poor", "2345678901"));
+		
+		System.out.println(account1.toString());
+		account1.deposit(1);
+		System.out.println("Withdraw allowed: " + String.format("%.2f", account1.withdraw(1000)));
+		System.out.println(account1.toString());
+		
+		System.out.println(account2.toString());
+		account2.deposit(1);
+		System.out.println("Withdraw allowed: " + String.format("%.2f", account2.withdraw(1000)));
+		System.out.println(account2.toString());
+	}
 	
 	public <T> boolean arrayInsertItem(T value, T[] array, int position)
 	{
@@ -517,6 +567,8 @@ public class Examples {
 		}
 		return true;
 	}
+	
+	
 	
 }
 
