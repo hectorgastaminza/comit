@@ -1,5 +1,7 @@
 package comit;
 
+import comit.OrderSystem.OrderSystem;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -65,7 +67,9 @@ public class Main {
 		
 		//Examples.examplePosition();
 		
-		Examples.exampleAccount();
+		//Examples.exampleAccount();
+		
+		new OrderSystem().launchApp();
 	}
 	
 }

@@ -1,0 +1,77 @@
+https://docs.google.com/document/d/1C3nVyn7HCRf9dMixneTTe916YGNOucDZLKjvLbstmDU/edit
+
+Develop a program that generates invoices for customers and purchase orders from suppliers.
+
+The system displays a menu asking if you want to make an invoice or purchase order.
+In case of an invoice, the program asks for the client’s data
+In case of a purchase order, the program asks for the supplier’s data
+Then the program asks to enter up to 10 items (may be less) with description and its value
+
+At the end, the program calculates the net total, GST, PST and finally shows on screen all the data of the invoice or purchase order. It displays one piece of data per line:
+
+Invoice Number / Purchase Order Number
+Customer number / Supplier Number
+Customer name / Supplier Name
+————————
+Items with the value of each
+———————- 
+Net total
+GST
+PST
+Final total
+
+@startuml
+Person <|-- Customer
+Person <|-- Supplier
+Person *-right- Order
+
+Order <|-- Invoice
+Order <|-- Purchase
+Order *-right- Item
+Order *-right- Taxes
+
+class Person {
+  String name
+  int number
+  Order[] orders
+  Order addOrder()
+  String toString()
+}
+
+class Customer {
+  String toString()
+}
+
+class Supplier {
+  String toString()
+}
+
+class Order {
+  int numberID
+  Item[] items
+  Item addItem()
+  String toString()
+}
+
+class Item {
+  String description
+  double price
+  double getPrice()
+  String toString()
+}
+
+class Purchase {
+  String toString()
+}
+
+class Invoice {
+  String toString()
+}
+
+class Taxes{
+  double GST
+  double PST
+  double calculateTaxes(double amount)
+}
+
+@enduml
