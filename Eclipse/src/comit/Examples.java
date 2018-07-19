@@ -568,7 +568,31 @@ public class Examples {
 		return true;
 	}
 	
-	
+	/**
+	 * Create a Bicycle class that has an ID attribute.
+	 * 
+	 * Have the Bicycle class track the ID of the last Bicycle created 
+	 * by using a static variable.
+	 * 
+	 * In your main application, create 5 instances of the bicycle class, 
+	 * and then print out the ID of the last bicycle created.
+	 * 
+	 * Do this using a using a static method that belongs to the Bicycle 
+	 * class to get that ID.
+	 * 
+	 */
+	public static void exampleStaticClassVariable() {
+		final int TOTAL_BIKES = 5;
+		
+		Bike newBike = null;
+		
+		for (int i = 0; i < TOTAL_BIKES; i++) {
+			newBike = new Bike();
+		}
+		
+		System.out.println("Id of the last bike created is " + newBike.getId());
+		System.out.println("Quantity of bikes created are " + newBike.getId());
+	}
 	
 }
 

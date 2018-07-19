@@ -69,7 +69,9 @@ public class Main {
 		
 		//Examples.exampleAccount();
 		
-		new OrderSystem().launchApp();
+		//new OrderSystem().launchApp();
+		
+		Examples.exampleStaticClassVariable();
 	}
 	
 }
